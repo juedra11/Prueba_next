@@ -25,5 +25,19 @@ jobs:
           node-version: '18'
       - run: npm install
 
-      - name: Run tests
+      - name: Run Unit tests
         run: npm test
+      
+      - name: SAST CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: 'javascript'
+      
+      - name: CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
+
+      - name: Dependency Scan
+        uses: github/trivy-action@master
+        with:
+          scan-type: 'fs'
+          scan-path: '.'

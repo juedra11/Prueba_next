@@ -37,7 +37,7 @@ jobs:
         uses: github/codeql-action/analyze@v2
 
       - name: Dependency Scan
-        uses: github/trivy-action@master
+        uses: aquasecurity/trivy-action@0.33.1
         with:
           scan-type: 'fs'
-          scan-path: '.'
+          scan-ref: '.'

@@ -98,7 +98,7 @@ jobs:
 
       - name: Start Application
         run: | 
-          npm run start &
+          npm run server &
           sleep 10
       
       - name: Verify app is running

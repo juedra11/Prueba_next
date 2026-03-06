@@ -45,7 +45,7 @@ jobs:
   
   build:
 
-    need: security-tests
+    needs: security-tests
     runs-on: ubuntu-latest
 
     steps:

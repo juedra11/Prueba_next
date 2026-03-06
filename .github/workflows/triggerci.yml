@@ -13,7 +13,7 @@ permissions:
 
 jobs:
 
-  Test_and_build:
+  security-tests:
 
     runs-on: ubuntu-latest
 
@@ -75,7 +75,7 @@ jobs:
     
   dast:
 
-    needs: Test_and_build
+    needs: security-tests
     runs-on: ubuntu-latest
 
     steps:

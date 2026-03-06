@@ -100,6 +100,9 @@ jobs:
         run: | 
           npm start &
           sleep 10
+      
+      - name: Verify app is running
+        run: curl http://localhost:3000
 
       - name: Run OWASP ZAP Baseline Scan
         uses: zaproxy/action-baseline@v0.10.0

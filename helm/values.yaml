@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: juedra11/Prueba-next
-  tag: "61f16ec233216bf06eee6dddb19350cc2a3091db"
+  tag: "ac39612ef1647116a89215feb6d95f1a7f0151ae"
   pullPolicy: IfNotPresent
 
 service:

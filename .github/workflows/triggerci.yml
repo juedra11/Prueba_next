@@ -60,19 +60,19 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t juedra11/Prueba-next:latest .
-          docker push juedra11/Prueba-next:${{github.sha}}
+          docker build -t juedra11/prueba-next:latest .
+          docker push juedra11/prueba-next:${{github.sha}}
 
       - name: Scan Docker Image with Trivy
         uses: aquasecurity/trivy-action@master
         with:
           scan-type: 'image'
-          scan-ref: 'juedra11/Prueba-next:${{github.sha}}'
+          scan-ref: 'juedra11/prueba-next:${{github.sha}}'
 
       - name: push image to registry
         run: |
-          docker tag juedra11/Prueba-next:latest juedra11/Prueba-next:${{github.sha}}
-          docker push juedra11/Prueba-next:${{github.sha}}
+          docker tag juedra11/prueba-next:latest juedra11/prueba-next:${{github.sha}}
+          docker push juedra11/prueba-next:${{github.sha}}
     
   dast:
 

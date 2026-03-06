@@ -1,0 +1,32 @@
+# Dependencias
+node_modules/
+/npm-debug.log*
+.npm/
+
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+
+# Archivos de registro y caché
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Opcional: Cachés del sistema y editores
+.DS_Store
+Thumbs.db
+.eslintcache
+.vscode/
+
+# Resultados de compilación/transpilación
+/dist
+/build
+/out
+/coverage

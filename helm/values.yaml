@@ -1,0 +1,10 @@
+replicaCount: 2
+
+image:
+  repository: juedra11/Prueba-next
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 3000
